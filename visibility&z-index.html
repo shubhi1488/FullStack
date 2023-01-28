@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility&Z-index</title>
+    <style>
+        .box{
+            width: 170px;
+            height: 170px;
+            border: 2px solid black; }  
+            /* created the square of width 170 px and height 170px */ 
+            /* provided the background color to the boxes */
+            /*whose z-index will be greater that will be at the top
+            For providing the z-index: 
+            i) set the position to relative,absolute,fixed,sticky
+            ii) set the top position
+            iii)Now provide the z-index to the element*/
+        #box1{
+            background-color: red;
+            position: relative;
+            top: 49px;
+            z-index: 35;
+        }
+        #box2{
+            position: relative;
+            top: 14px;
+            z-index: 34;
+            /*The difference between display:none and visibility:hidden is that visibility reserves the space of the element whereas 
+            display donot reserves the space and the default value of visibility is visibility:visibile;*/
+            /* display: none; */
+            /* visibility: hidden; */
+            /*visibility:collapse; is for table it is used to hide the row and column whose space can be used for other content but the table layout 
+            will not change.
+            If collapse is used for other elements other than table then it renders hidden */
+
+            background-color: green;
+        }
+        #box3{
+            background-color: blue;
+        }
+        #box4{
+            background-color: yellow;
+        }
+        /*z-index will only work for the positions which are relative,absolute,sticky not for static positions 
+        z-index is used to position the elements on top of each other to show which element is there on top */
+
+    </style>
+</head>
+<body>
+    <!-- div.classname#idname$*number is shortcut to create multiple divs with the classname and id and $ is used to give the particular number to id -->
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>
